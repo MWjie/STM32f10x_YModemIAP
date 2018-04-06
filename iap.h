@@ -2,21 +2,21 @@
 #define __IAP_H__
 #include <stdint.h>  
 
-typedef  void (*iapfun)(void);				//定义一个函数类型的参数.
+typedef  void (*iapfun)(void);              //定义一个函数类型的参数.
 
-#define FLASH_APP1_ADDR		( 0x08018000 )  //第一个应用程序起始地址(存放在FLASH)
-											
-											
+#define FLASH_APP1_ADDR     ( 0x08018000 )  //第一个应用程序起始地址(存放在FLASH)
+                                            
+                                            
 //FLASH起始地址
-#define STM32_FLASH_BASE 	( 0x08000000 ) 	//STM32 FLASH的起始地址
-#define STM_SECTOR_SIZE		( 2048 )		//扇区大小
-#define STM32_FLASH_SIZE 	( 256 )			//FLASH大小
-											
+#define STM32_FLASH_BASE    ( 0x08000000 )  //STM32 FLASH的起始地址
+#define STM_SECTOR_SIZE     ( 2048 )        //扇区大小
+#define STM32_FLASH_SIZE    ( 256 )         //FLASH大小
+                                            
 #define PACKET_SEQNO_INDEX      ( 1 )       //数据包序号
 #define PACKET_SEQNO_COMP_INDEX ( 2 )       //包序取反
 
-#define PACKET_HEADER           ( 3 )	  	//首部3位
-#define PACKET_TRAILER          ( 2 )	  	//CRC检验的2位
+#define PACKET_HEADER           ( 3 )       //首部3位
+#define PACKET_TRAILER          ( 2 )       //CRC检验的2位
 #define PACKET_OVERHEAD         ( PACKET_HEADER + PACKET_TRAILER )//3位首部+2位CRC
 #define PACKET_SIZE             ( 128 )     //128字节
 #define PACKET_1K_SIZE          ( 1024 )    //1024字节
@@ -68,3 +68,4 @@ void cmd_update(void);
 extern uint8_t flagIAP;
 
 #endif
+
