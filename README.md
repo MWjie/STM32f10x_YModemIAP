@@ -1,3 +1,3 @@
 # STM32f10x_YModemIAP
 
-[![Build Status](https://travis-ci.org/meolu/walle-web.svg?branch=master)](https://travis-ci.org/meolu/walle-web)
+基于stm32f10x IAP程序，使用YModem协议。
